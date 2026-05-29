@@ -3,7 +3,7 @@ const cors = require('cors');
 const Database = require('better-sqlite3');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = Number(process.env.PORT) || 3000;
 const db = new Database('energy.db');
 
 app.use(cors());
